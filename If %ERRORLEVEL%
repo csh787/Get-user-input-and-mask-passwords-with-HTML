@@ -1,0 +1,9 @@
+call myExe.exe
+if errorlevel 1 (
+  goto build_fail
+)
+That seems to work for us. Note that you can put in multiple commands in the parens like an echo or whatever. Also note that build_fail is defined as:
+
+:build_fail
+echo ********** BUILD FAILURE **********
+exit /b 1
